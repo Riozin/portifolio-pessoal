@@ -1,20 +1,26 @@
-// Configurações gerais
+/* Estilos Gerais */
 body {
     margin: 0 auto;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #000e14;
+    color: white;
 }
 
 main {
     background-color: #03121a;
 }
 
-// Estilos do menu de navegação
+/* Navegação */
 .nav-menu {
     display: flex;
     justify-content: space-between;
     background-color: #09bc8a;
     padding: 25px;
+}
+
+.nav-menu ul {
+    list-style-type: none;
+    display: flex;
 }
 
 .nav-menu li a {
@@ -27,14 +33,13 @@ main {
     border-radius: 20px;
 }
 
-// Efeito hover nos links do menu
 .nav-menu li a:hover {
     color: #09bc8a;
     font-size: 36px;
     background-color: #03131b;
 }
 
-// Estilos do cabeçalho principal
+/* Cabeçalho */
 .menu-principal {
     display: flex;
     align-items: center;
@@ -44,14 +49,13 @@ main {
 
 .menu-principal h1 {
     font-size: 85px;
-    color: white;
 }
 
 .span-design {
     color: #09bc8a;
 }
 
-// Seção "Sobre mim"
+/* Seção Sobre */
 .menu-sobre {
     display: flex;
     height: 48em;
@@ -64,24 +68,37 @@ main {
 }
 
 .menu-sobre .sobre-text p {
-    color: white;
     font-size: 32px;
     padding: 10px;
 }
 
-// Estilos dos títulos das seções
-#sobre h2, #formacao h2, #portfolio h2, #contato h2 {
+/* Títulos */
+h2 {
     text-align: center;
     padding: 20px;
     font-size: 45px;
-    color: white;
 }
 
 #sobre .span {
     color: #09bc8a;
 }
 
-// Grid de projetos
+/* Formação */
+#formacao {
+    padding: 40px 20px;
+}
+
+#formacao h3 {
+    color: #09bc8a;
+    font-size: 28px;
+    margin: 30px 0 15px;
+}
+
+/* Portfólio */
+#portfolio {
+    padding: 40px 20px;
+}
+
 .grade-projetos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -90,52 +107,33 @@ main {
     margin: 0 auto;
 }
 
-// Estilos do formulário de contato
+.item-projeto {
+    background-color: #03121a;
+    border-radius: 8px;
+    padding: 25px;
+}
+
+.item-projeto h3 {
+    color: #09bc8a;
+    font-size: 24px;
+}
+
+/* Contato */
+#contato {
+    padding: 40px 20px;
+}
+
 .formulario-contato {
     max-width: 600px;
-    margin: 0 auto 40px auto;
-    background-color: #000e14;
+    margin: 0 auto 40px;
     padding: 30px;
+    background-color: #000e14;
     border-radius: 8px;
 }
 
-// Botão de enviar
-.btn-enviar {
-    display: block;
-    width: 100%;
-    padding: 15px;
-    background-color: #09bc8a;
-    color: #03131b;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
+.campo-form {
+    margin-bottom: 20px;
 }
 
-// Media queries para responsividade
-@media (max-width: 900px) {
-    .nav-menu ul {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .menu-principal h1 {
-        font-size: 45px;
-    }
-    
-    .menu-sobre {
-        flex-direction: column;
-        height: auto;
-    }
-}
-
-@media (max-width: 500px) {
-    .menu-principal h1 {
-        font-size: 35px;
-    }
-    
-    .menu-principal {
-        height: 20em;
-    }
-}
+.campo-form label {
+    display: block
