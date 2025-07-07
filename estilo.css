@@ -1,24 +1,23 @@
-body{
+// Configurações gerais
+body {
     margin: 0 auto;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color:#000e14;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #000e14;
 }
 
-
-
-main{
-    background-color:#03121a;
+main {
+    background-color: #03121a;
 }
 
-
-.nav-menu{
+// Estilos do menu de navegação
+.nav-menu {
     display: flex;
-   justify-content: space-between;
+    justify-content: space-between;
     background-color: #09bc8a;
     padding: 25px;
-   
 }
-.nav-menu li a{
+
+.nav-menu li a {
     text-decoration: none;
     color: #03131b;
     padding: 20px;
@@ -28,422 +27,115 @@ main{
     border-radius: 20px;
 }
 
-.nav-menu li a:hover{
+// Efeito hover nos links do menu
+.nav-menu li a:hover {
     color: #09bc8a;
     font-size: 36px;
-    background-color:#03131b;
-    border-radius: 20px;
+    background-color: #03131b;
 }
 
-.nav-menu ul{
-    list-style-type: none;
-    display: flex;
-   
-}
-
-.menu-principal{
+// Estilos do cabeçalho principal
+.menu-principal {
     display: flex;
     align-items: center;
     padding: 40px;
     height: 45em;
 }
 
-.menu-principal h1{
+.menu-principal h1 {
     font-size: 85px;
     color: white;
 }
 
-.span-design{
+.span-design {
     color: #09bc8a;
 }
 
+// Seção "Sobre mim"
 .menu-sobre {
     display: flex;
     height: 48em;
-
 }
 
-.menu-sobre img{
+.menu-sobre img {
     width: 50em;
     padding: 20px;
     height: 90%;
-    
-
 }
 
-.menu-sobre .sobre-text p{
+.menu-sobre .sobre-text p {
     color: white;
     font-size: 32px;
     padding: 10px;
-    text-align: left;
-    padding: 10px;
-
 }
 
-
-#sobre h2{
+// Estilos dos títulos das seções
+#sobre h2, #formacao h2, #portfolio h2, #contato h2 {
     text-align: center;
     padding: 20px;
     font-size: 45px;
     color: white;
 }
 
-#sobre .span{
+#sobre .span {
     color: #09bc8a;
 }
 
-/* --- Formação e Habilidades (Simplificado) --- */
-#formacao {
-    padding: 40px 20px; /* Padding menor */
-    background-color: #03121a;
-    color: #ffffff;
-}
-
-#formacao h2 {
-    text-align: center;
-    font-size: 38px; /* Fonte um pouco menor */
-    color: white;
-    margin-bottom: 40px;
-}
-
-#formacao h3 {
-    font-size: 28px; /* Fonte menor */
-    color: #09bc8a;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    padding-bottom: 5px; /* Linha mais sutil */
-    border-bottom: 1px solid rgba(9, 188, 138, 0.3);
-}
-
-#formacao ul {
-    list-style: disc; /* Volta ao marcador de disco padrão */
-    padding-left: 20px; /* Recuo padrão */
-    margin-bottom: 25px;
-}
-
-#formacao ul li {
-    font-size: 20px; /* Fonte menor */
-    line-height: 1.5;
-    margin-bottom: 8px;
-}
-
-/* --- Portfólio (Simplificado) --- */
-#portfolio {
-    padding: 40px 20px;
-    background-color: #000e14;
-    color: #ffffff;
-    text-align: center;
-}
-
-#portfolio h2 {
-    font-size: 38px;
-    color: white;
-    margin-bottom: 40px;
-}
-
+// Grid de projetos
 .grade-projetos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Colunas mais flexíveis */
-    gap: 25px; /* Espaçamento menor */
-    max-width: 1100px; /* Largura máxima menor */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
-.item-projeto {
-    background-color: #03121a;
-    border-radius: 8px; /* Borda menos arredondada */
-    padding: 25px; /* Padding menor */
-    text-align: left;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Sombra mais suave */
-}
-
-.item-projeto h3 {
-    font-size: 24px; /* Fonte menor */
-    color: #09bc8a;
-    margin-bottom: 12px;
-}
-
-.item-projeto p {
-    font-size: 16px; /* Fonte menor */
-    line-height: 1.5;
-    color: #cccccc;
-    margin-bottom: 20px;
-}
-
-.item-projeto .link-projeto,
-.item-projeto .link-repo {
-    display: inline-block;
-    background-color: #09bc8a;
-    color: #03131b;
-    padding: 10px 20px; /* Padding menor */
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 500; /* Peso da fonte normal */
-    margin-right: 10px; /* Margem menor */
-    margin-top: 8px;
-    /* Remover transições para simplificar */
-}
-
-.item-projeto .link-projeto:hover,
-.item-projeto .link-repo:hover {
-    background-color: #058f69; /* Apenas uma mudança de cor mais simples */
-    color: #ffffff; /* Texto branco no hover */
-}
-
-/* --- Contato (Simplificado) --- */
-#contato {
-    padding: 40px 20px;
-    background-color: #03121a;
-    color: #ffffff;
-    text-align: center;
-}
-
-#contato h2 {
-    font-size: 38px;
-    color: white;
-    margin-bottom: 30px;
-}
-
-#contato p {
-    font-size: 18px; /* Fonte menor */
-    line-height: 1.4;
-    margin-bottom: 30px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    color: #cccccc;
-}
-
+// Estilos do formulário de contato
 .formulario-contato {
-    max-width: 600px; /* Largura máxima menor */
+    max-width: 600px;
     margin: 0 auto 40px auto;
     background-color: #000e14;
-    padding: 30px; /* Padding menor */
+    padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Sombra mais suave */
-    text-align: left;
 }
 
-.campo-form {
-    margin-bottom: 20px; /* Margem menor */
-}
-
-.campo-form label {
-    display: block;
-    font-size: 18px; /* Fonte menor */
-    margin-bottom: 8px;
-    color: #09bc8a;
-    font-weight: 500;
-}
-
-.campo-form input[type="text"],
-.campo-form input[type="email"],
-.campo-form textarea {
-    width: calc(100% - 20px);
-    padding: 12px; /* Padding menor */
-    border: 1px solid #09bc8a;
-    border-radius: 4px; /* Bordas menos arredondadas */
-    background-color: #03131b;
-    color: white;
-    font-size: 16px; /* Fonte menor */
-    outline: none;
-}
-
-.campo-form input[type="text"]:focus,
-.campo-form input[type="email"]:focus,
-.campo-form textarea:focus {
-    border-color: #058f69; /* Cor de foco mais simples */
-    /* Remover shadow no focus */
-}
-
-.campo-form textarea {
-    min-height: 100px; /* Altura mínima menor */
-}
-
+// Botão de enviar
 .btn-enviar {
     display: block;
     width: 100%;
-    padding: 15px; /* Padding menor */
+    padding: 15px;
     background-color: #09bc8a;
     color: #03131b;
     border: none;
     border-radius: 5px;
-    font-size: 18px; /* Fonte menor */
+    font-size: 18px;
     font-weight: bold;
     cursor: pointer;
-    /* Remover transições e transform para simplificar */
 }
 
-.btn-enviar:hover {
-    background-color: #058f69;
-}
-
-.links-sociais {
-    margin-top: 25px;
-}
-
-.links-sociais p {
-    font-size: 18px;
-    margin-bottom: 15px;
-    color: #cccccc;
-}
-
-.links-sociais a {
-    display: inline-block;
-    background-color: #09bc8a;
-    color: #03131b;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 500;
-    margin: 0 8px; /* Margem menor */
-    /* Remover transições para simplificar */
-}
-
-.links-sociais a:hover {
-    background-color: #058f69;
-    color: #ffffff;
-}
-
-/* --- Footer (Simplificado) --- */
-footer {
-    background-color: #000e14;
-    color: #cccccc;
-    text-align: center;
-    padding: 25px 20px; /* Padding menor */
-    font-size: 16px; /* Fonte menor */
-    border-top: 1px solid rgba(9, 188, 138, 0.1); /* Borda mais sutil */
-}
-
-/* --- Ajustes Gerais e Responsividade (Simplificado) --- */
-/* Mantive os tamanhos de fonte responsivos, mas simplifiquei outros ajustes */
+// Media queries para responsividade
 @media (max-width: 900px) {
     .nav-menu ul {
         flex-direction: column;
         align-items: center;
-        width: 100%;
-        margin-top: 15px;
     }
-
-    .nav-menu li {
-        margin-bottom: 8px;
-    }
-
-    .nav-menu li a {
-        font-size: 22px; /* Fonte menor */
-        padding: 8px 12px;
-    }
-
+    
     .menu-principal h1 {
-        font-size: 45px; /* Reduz o tamanho do título principal */
+        font-size: 45px;
     }
-
-    .menu-principal {
-        height: 30em; /* Ajusta a altura da seção principal */
-        padding: 15px;
-    }
-
+    
     .menu-sobre {
         flex-direction: column;
-        align-items: center;
         height: auto;
-        padding: 15px;
-    }
-
-    .menu-sobre img {
-        width: 90%;
-        max-width: 350px;
-        margin-bottom: 20px;
-    }
-
-    .menu-sobre .sobre-text p {
-        font-size: 22px; /* Reduz o tamanho da fonte */
-        padding: 0 5px;
-    }
-
-    #sobre h2, #formacao h2, #portfolio h2, #contato h2 {
-        font-size: 32px;
-    }
-
-    #formacao h3 {
-        font-size: 22px;
-    }
-
-    #formacao ul li {
-        font-size: 18px;
-    }
-
-    .item-projeto {
-        padding: 18px;
-    }
-
-    .item-projeto h3 {
-        font-size: 20px;
-    }
-
-    .item-projeto p {
-        font-size: 15px;
-    }
-
-    .item-projeto .link-projeto,
-    .item-projeto .link-repo {
-        padding: 8px 15px;
-        font-size: 14px;
-        margin-right: 8px;
-    }
-
-    .formulario-contato {
-        padding: 20px;
-    }
-
-    .campo-form label {
-        font-size: 16px;
-    }
-
-    .campo-form input, .campo-form textarea {
-        font-size: 14px;
-        padding: 10px;
-    }
-
-    .btn-enviar {
-        font-size: 16px;
-        padding: 12px;
-    }
-
-    .links-sociais a {
-        font-size: 14px;
-        padding: 8px 15px;
     }
 }
 
 @media (max-width: 500px) {
-    .nav-menu .logo {
-        margin-bottom: 15px;
-    }
-
     .menu-principal h1 {
         font-size: 35px;
     }
-
+    
     .menu-principal {
         height: 20em;
     }
-
-    .menu-sobre .sobre-text p {
-        font-size: 18px;
-    }
-
-    #sobre h2, #formacao h2, #portfolio h2, #contato h2 {
-        font-size: 28px;
-    }
-
-    #formacao h3 {
-        font-size: 20px;
-    }
-
-    #formacao ul li {
-        font-size: 16px;
-    }
 }
-
-
