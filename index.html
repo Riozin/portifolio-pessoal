@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio Samuel</title>
-    // CSS principal
-    <link rel="stylesheet" href="estilo.css"> 
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
+    <!-- Cabeçalho com menu de navegação -->
     <header>
-        // Menu principal
         <nav>
             <div class="nav-menu">
                 <ul>
@@ -20,64 +19,110 @@
                 </ul>
             </div>
         </nav>
-
+        
+        <!-- Título principal com efeito especial -->
         <div class="menu-principal">
-             <h1>SEJA BEM VINDO AO PORTIFÓLIO DE
-               <span class="span-design">SAMUEL RIOS &lt;/&gt</span>
-             </h1>
+            <h1>SEJA BEM VINDO AO PORTFÓLIO DE
+                <span class="span-design">SAMUEL RIOS &lt;/&gt</span>
+            </h1>
         </div>
     </header>
 
+    <!-- Conteúdo principal dividido em seções -->
     <main>
-        // Seção sobre mim
+        <!-- Seção sobre mim com foto e texto -->
         <section id="sobre">
             <h2>SOBRE <span class="span">MIM</span></h2>
-           <div class="menu-sobre">
-            <img class="imagemMInha" src="imagem.jpg" alt="Minha foto">
-            <div class="sobre-text">
-                <p>Olá! Sou o Samuel Rios...</p>
+            <div class="menu-sobre">
+                <img class="imagemMInha" src="imagem.jpg" alt="Foto do Samuel">
+                <div class="sobre-text">
+                    <p>Olá! Sou o Samuel Rios, um futuro desenvolvedor back-end com uma paixão pela programação que nasceu da observação das máquinas CNC no meu curso técnico em mecânica. Aquela experiência me mostrou o poder da lógica e me impulsionou a mergulhar no universo da Tecnologia da Informação.</p>
+                    <p>Atualmente, dedico meus estudos a Java, buscando construir uma base sólida para minha carreira. Meu objetivo é claro: conquistar minha primeira vaga como desenvolvedor back-end e aplicar meus conhecimentos em projetos desafiadores. Fora do código, encontro equilíbrio e inspiração tocando instrumentos musicais, um hobby que me ajuda a manter a mente criativa e focada.</p>
+                </div>
             </div>
-           </div>
         </section>
 
-        // Seção formação e skills
+        <!-- Seção de formação e habilidades -->
         <section id="formacao" class="secao-sobre-mim">
             <h2>Formação e Habilidades</h2>
+            
             <h3>Formação Educacional</h3>
             <ul>
                 <li>Técnico em Mecânica Industrial - ETEC Bento Quirino - 2021/2023</li>
                 <li>Python básico ao avançado - Udemy</li>
             </ul>
+
+            <h3>Idiomas</h3>
+            <ul>
+                <li>Português: Nativo</li>
+                <li>Inglês: Básico</li>
+            </ul>
+
+            <h3>Principais Habilidades</h3>
+            <ul>
+                <li>Linguagens de Programação: Java, Python, C#</li>
+                <li>Controle de Versão: Git/GitHub</li>
+                <li>Banco de Dados: MySQL, SQL Server</li>
+            </ul>
         </section>
 
-        // Portfólio com projetos
+        <!-- Seção do portfólio com projetos -->
         <section id="portfolio" class="secao-padrao">
             <h2>Meu Portfólio</h2>
             <div class="grade-projetos">
+                <!-- Projeto 1 -->
                 <article class="item-projeto">
                     <h3>Projeto 1: Site de vendas digital</h3>
-                    <p>Site simulando uma loja digital...</p>
-                    <a href="sites-portifolio/site2/siteVendas.html" target="_blank" class="link-projeto">Ver Projeto</a>
+                    <p>Site simulando uma loja digital feito com HTML e CSS puros, com o intuito de treinar habilidades aprendidas nos demais cursos.</p>
+                    <a href="sites-portifolio/site2/siteVendas.html" target="_blank" class="link-projeto">Ver Projeto Online</a>
+                </article>
+
+                <!-- Projeto 2 -->
+                <article class="item-projeto">    
+                    <h3>Projeto 2: Site de adoção de Pets</h3>
+                    <p>Site para realizar a adoção de pets de forma simples e direta, sua interface simples facilita a interação de pessoas mais leigas. Desenolvido com HTML e CSS puro.</p>
+                    <a href="sites-portifolio/site1/index.html" target="_blank" class="link-projeto">Ver Projeto Online</a>
                 </article>
             </div>
         </section>
 
-        // Formulário de contato
+        <!-- Seção de contato com formulário e redes sociais -->
         <section id="contato" class="secao-padrao">
             <h2>Entre em Contato</h2>
+            <p>Se você tem alguma pergunta, proposta ou apenas quer conversar, sinta-se à vontade para preencher o formulário abaixo ou me contatar através das minhas redes sociais!</p>
+            
+            <!-- Formulário de contato -->
             <form class="formulario-contato">
                 <div class="campo-form">
                     <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome" required placeholder="Seu nome">
+                    <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
                 </div>
-                <button type="submit" class="btn-enviar">Enviar</button>
+
+                <div class="campo-form">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="seu.email@exemplo.com">
+                </div>
+
+                <div class="campo-form">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="6" required placeholder="Escreva sua mensagem aqui..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-enviar">Enviar Mensagem</button>
             </form>
+
+            <!-- Links para redes sociais -->
+            <div class="links-sociais">
+                <p>Ou me encontre em:</p>
+                <a href="https://www.linkedin.com/in/seu-perfil" target="_blank">LinkedIn</a>
+                <a href="https://github.com/Riozin?tab=repositories" target="_blank">GitHub</a>
+            </div>
         </section>
     </main>
 
-    // Rodapé simples
+    <!-- Rodapé simples -->
     <footer>
-        <p>&copy; 2025 Samuel Rios.</p>
+        <p>&copy; 2025 Samuel Rios. Todos os direitos reservados.</p>
     </footer>
 </body>
 </html>
