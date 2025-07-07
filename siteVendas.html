@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossa Loja - Seus Produtos Favoritos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Cores Base */
+        :root {
+            --primary-color: #6200EE; /* Azul Vibrante */
+            --secondary-color: #03DAC6; /* Verde Água */
+            --text-dark: #333;
+            --text-light: #f8f8f8;
+            --background-light: #f0f2f5;
+            --card-background: #ffffff;
+            --border-light: #e0e0e0;
+        }
+
+        /* Reset Básico e Fontes */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--background-light);
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 15px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap; /* Para responsividade */
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8em;
+            font-weight: 700;
+            color: var(--text-light);
+            text-decoration: none;
+            margin-bottom: 10px; /* Espaço para mobile */
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            margin-bottom: 10px; /* Espaço para mobile */
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Banner Principal (Hero) */
+        .hero-section {
+            background: linear-gradient(rgba(98,0,238,0.7), rgba(98,0,238,0.7)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400"><rect width="100%" height="100%" fill="#6200EE"/><text x="50%" y="50%" font-family="sans-serif" font-size="60" fill="%23ffffff" text-anchor="middle" dominant-baseline="middle">Novidades Exclusivas</text><rect x="100" y="250" width="200" height="80" fill="%2303DAC6" rx="10"/><rect x="900" y="70" width="150" height="150" fill="%2303DAC6" rx="75"/></svg>') no-repeat center center/cover;
+            color: var(--text-light);
+            text-align: center;
+            padding: 80px 20px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+            margin: 20px auto; /* Centraliza e adiciona margem */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .hero-section h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+
+        .hero-section p {
+            font-size: 1.2em;
+            max-width: 700px;
+            margin: 0 auto 30px auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: var(--text-dark); /* Cor de texto contrastante */
+            padding: 12px 28px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: #00b3a1; /* Tom mais escuro do verde água */
+            transform: translateY(-2px);
+        }
+
+        /* Seção de Produtos */
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.2em;
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .product-card {
+            background-color: var(--card-background);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border: 1px solid var(--border-light);
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--border-light);
+            /* Imagem padrão para produtos se não houver SVG ou link */
+            background-color: #ccc;
+            display: block;
+        }
+
+        .product-info {
+            padding: 15px;
+        }
+
+        .product-info h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.4em;
+            margin-bottom: 8px;
+            color: var(--primary-color);
+        }
+
+        .product-info .price {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        .product-info button {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.95em;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        .product-info button:hover {
+            background-color: #4a00af; /* Tom mais escuro do azul vibrante */
+        }
+
+        /* Seção Sobre Nós/Contato */
+        .about-contact-section {
+            background-color: var(--card-background);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .about-contact-section h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2em;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .about-contact-section p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: var(--text-dark);
+            color: var(--text-light);
+            padding: 30px 0;
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        .footer-links a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+            }
+            .logo {
+                margin-bottom: 15px;
+            }
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .hero-section h1 {
+                font-size: 2.2em;
+            }
+            .hero-section p {
+                font-size: 1em;
+            }
+            .section-title {
+                font-size: 1.8em;
+            }
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="#" class="logo">Nossa Loja</a>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section container">
+            <h1>Descubra o Melhor para Você!</h1>
+            <p>Qualidade, preço justo e as últimas novidades em um só lugar. Venha conferir!</p>
+            <a href="#produtos" class="btn">Compre Agora!</a>
+        </section>
+
+        <section id="produtos" class="container">
+            <h2 class="section-title">Nossos Destaques</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 200'><rect width='100%' height='100%' fill='%23FF5722'/><rect x='80' y='50' width='140' height='100' fill='%23ffffff' rx='10'/><path d='M110 150 L110 180 L130 180 L130 150 Z' fill='%23555'/><path d='M170 150 L170 180 L190 180 L190 150 Z' fill='%23555'/><circle cx='150' cy='110' r='40' fill='%23eeeeee'/><circle cx='150' cy='110' r='30' fill='%23ffffff'/><text x='150' y='120' font-family='sans-serif' font-size='20' fill='%23FF5722' text-anchor='middle'>🎮</text></svg>" alt="Cadeira Gamer">
+                    <div class="product-info">
+                        <h3>Cadeira Gamer Ultimate</h3>
+                        <p class="price">R$ 799,00</p>
+                        <button>Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 200'><rect width='100%' height='100%' fill='%234CAF50'/><circle cx='100' cy='100' r='40' fill='%23ffffff'/><circle cx='200' cy='100' r='40' fill='%23ffffff'/><path d='M100 100 C120 70, 180 70, 200 100' stroke='%23333' stroke-width='5' fill='none'/><text x='100' y='110' font-family='sans-serif' font-size='20' fill='%234CAF50' text-anchor='middle'>🎧</text><text x='200' y='110' font-family='sans-serif' font-size='20' fill='%234CAF50' text-anchor='middle'>🎵</text></svg>" alt="Fones Wireless">
+                    <div class="product-info">
+                        <h3>Fones Wireless Pro</h3>
+                        <p class="price">R$ 280,00</p>
+                        <button>Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 200'><rect width='100%' height='100%' fill='%239C27B0'/><circle cx='150' cy='100' r='50' fill='%23ffffff'/><path d='M140 150 L160 150 L160 170 L140 170 Z' fill='%23555'/><text x='150' y='110' font-family='sans-serif' font-size='40' fill='%239C27B0' text-anchor='middle'>💡</text></svg>" alt="Smart Lamp">
+                    <div class="product-info">
+                        <h3>Lâmpada Inteligente</h3>
+                        <p class="price">R$ 85,00</p>
+                        <button>Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 200'><rect width='100%' height='100%' fill='%2300BCD4'/><rect x='80' y='40' width='140' height='120' fill='%23ffffff' rx='10'/><path d='M100 40 L100 20 C100 10, 110 10, 120 20 L120 40 Z' fill='%23555'/><path d='M180 40 L180 20 C180 10, 190 10, 200 20 L200 40 Z' fill='%23555'/><rect x='95' y='55' width='110' height='20' fill='%23eeeeee'/><text x='150' y='115' font-family='sans-serif' font-size='30' fill='%2300BCD4' text-anchor='middle'>🎒</text></svg>" alt="Mochila Executiva">
+                    <div class="product-info">
+                        <h3>Mochila Executiva Premium</h3>
+                        <p class="price">R$ 199,00</p>
+                        <button>Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="container about-contact-section">
+            <h2>Sobre Nós</h2>
+            <p>Na Nossa Loja, acreditamos que encontrar seus produtos favoritos deve ser fácil e prazeroso. Selecionamos cuidadosamente cada item para garantir a melhor experiência para você.</p>
+        </section>
+
+        <section id="contato" class="container about-contact-section" style="margin-top: 20px;">
+            <h2>Fale Conosco</h2>
+            <p>Tem alguma pergunta ou precisa de ajuda? Estamos aqui para você!</p>
+            <p>Email: contato@nossaloja.com</p>
+            <p>Telefone: (19) 99876-1234</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Nossa Loja. Todos os direitos reservados.</p>
+            <div class="footer-links">
+                <a href="#">Política de Privacidade</a>
+                <a href="#">Termos de Uso</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
