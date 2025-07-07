@@ -1,16 +1,15 @@
-/* Estilos Gerais */
+/* ===== ESTILOS GERAIS ===== */
 body {
     margin: 0 auto;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #000e14;
-    color: white;
 }
 
 main {
     background-color: #03121a;
 }
 
-/* Navegação */
+/* ===== NAVEGAÇÃO ===== */
 .nav-menu {
     display: flex;
     justify-content: space-between;
@@ -39,7 +38,7 @@ main {
     background-color: #03131b;
 }
 
-/* Cabeçalho */
+/* ===== CABEÇALHO PRINCIPAL ===== */
 .menu-principal {
     display: flex;
     align-items: center;
@@ -49,13 +48,14 @@ main {
 
 .menu-principal h1 {
     font-size: 85px;
+    color: white;
 }
 
 .span-design {
     color: #09bc8a;
 }
 
-/* Seção Sobre */
+/* ===== SEÇÃO SOBRE ===== */
 .menu-sobre {
     display: flex;
     height: 48em;
@@ -68,35 +68,58 @@ main {
 }
 
 .menu-sobre .sobre-text p {
+    color: white;
     font-size: 32px;
     padding: 10px;
+    text-align: left;
 }
 
-/* Títulos */
-h2 {
+/* ===== TÍTULOS DAS SEÇÕES ===== */
+#sobre h2, #formacao h2, #portfolio h2, #contato h2 {
     text-align: center;
     padding: 20px;
     font-size: 45px;
+    color: white;
 }
 
 #sobre .span {
     color: #09bc8a;
 }
 
-/* Formação */
+/* ===== FORMAÇÃO ===== */
 #formacao {
     padding: 40px 20px;
+    background-color: #03121a;
+    color: #ffffff;
 }
 
 #formacao h3 {
-    color: #09bc8a;
     font-size: 28px;
-    margin: 30px 0 15px;
+    color: #09bc8a;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(9, 188, 138, 0.3);
 }
 
-/* Portfólio */
+#formacao ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+#formacao ul li {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+/* ===== PORTFÓLIO ===== */
 #portfolio {
     padding: 40px 20px;
+    background-color: #000e14;
+    color: #ffffff;
+    text-align: center;
 }
 
 .grade-projetos {
@@ -111,24 +134,57 @@ h2 {
     background-color: #03121a;
     border-radius: 8px;
     padding: 25px;
+    text-align: left;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .item-projeto h3 {
-    color: #09bc8a;
     font-size: 24px;
+    color: #09bc8a;
+    margin-bottom: 12px;
 }
 
-/* Contato */
+.item-projeto p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #cccccc;
+    margin-bottom: 20px;
+}
+
+.item-projeto .link-projeto,
+.item-projeto .link-repo {
+    display: inline-block;
+    background-color: #09bc8a;
+    color: #03131b;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 10px;
+    margin-top: 8px;
+}
+
+.item-projeto .link-projeto:hover,
+.item-projeto .link-repo:hover {
+    background-color: #058f69;
+    color: #ffffff;
+}
+
+/* ===== CONTATO ===== */
 #contato {
     padding: 40px 20px;
+    background-color: #03121a;
+    text-align: center;
 }
 
 .formulario-contato {
     max-width: 600px;
-    margin: 0 auto 40px;
-    padding: 30px;
+    margin: 0 auto 40px auto;
     background-color: #000e14;
+    padding: 30px;
     border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    text-align: left;
 }
 
 .campo-form {
@@ -136,4 +192,199 @@ h2 {
 }
 
 .campo-form label {
-    display: block
+    display: block;
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #09bc8a;
+    font-weight: 500;
+}
+
+.campo-form input[type="text"],
+.campo-form input[type="email"],
+.campo-form textarea {
+    width: calc(100% - 20px);
+    padding: 12px;
+    border: 1px solid #09bc8a;
+    border-radius: 4px;
+    background-color: #03131b;
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+.campo-form textarea {
+    min-height: 100px;
+}
+
+.btn-enviar {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #09bc8a;
+    color: #03131b;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-enviar:hover {
+    background-color: #058f69;
+}
+
+.links-sociais {
+    margin-top: 25px;
+}
+
+.links-sociais a {
+    display: inline-block;
+    background-color: #09bc8a;
+    color: #03131b;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 8px;
+}
+
+.links-sociais a:hover {
+    background-color: #058f69;
+    color: #ffffff;
+}
+
+/* ===== RODAPÉ ===== */
+footer {
+    background-color: #000e14;
+    color: #cccccc;
+    text-align: center;
+    padding: 25px 20px;
+    font-size: 16px;
+    border-top: 1px solid rgba(9, 188, 138, 0.1);
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 900px) {
+    .nav-menu ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .nav-menu li {
+        margin-bottom: 8px;
+    }
+
+    .nav-menu li a {
+        font-size: 22px;
+        padding: 8px 12px;
+    }
+
+    .menu-principal h1 {
+        font-size: 45px;
+    }
+
+    .menu-principal {
+        height: 30em;
+        padding: 15px;
+    }
+
+    .menu-sobre {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 15px;
+    }
+
+    .menu-sobre img {
+        width: 90%;
+        max-width: 350px;
+        margin-bottom: 20px;
+    }
+
+    .menu-sobre .sobre-text p {
+        font-size: 22px;
+        padding: 0 5px;
+    }
+
+    #sobre h2, #formacao h2, #portfolio h2, #contato h2 {
+        font-size: 32px;
+    }
+
+    #formacao h3 {
+        font-size: 22px;
+    }
+
+    #formacao ul li {
+        font-size: 18px;
+    }
+
+    .item-projeto {
+        padding: 18px;
+    }
+
+    .item-projeto h3 {
+        font-size: 20px;
+    }
+
+    .item-projeto p {
+        font-size: 15px;
+    }
+
+    .item-projeto .link-projeto,
+    .item-projeto .link-repo {
+        padding: 8px 15px;
+        font-size: 14px;
+        margin-right: 8px;
+    }
+
+    .formulario-contato {
+        padding: 20px;
+    }
+
+    .campo-form label {
+        font-size: 16px;
+    }
+
+    .campo-form input, .campo-form textarea {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .btn-enviar {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .links-sociais a {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 500px) {
+    .menu-principal h1 {
+        font-size: 35px;
+    }
+
+    .menu-principal {
+        height: 20em;
+    }
+
+    .menu-sobre .sobre-text p {
+        font-size: 18px;
+    }
+
+    #sobre h2, #formacao h2, #portfolio h2, #contato h2 {
+        font-size: 28px;
+    }
+
+    #formacao h3 {
+        font-size: 20px;
+    }
+
+    #formacao ul li {
+        font-size: 16px;
+    }
+}
